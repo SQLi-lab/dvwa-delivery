@@ -82,7 +82,7 @@ def get_products():
             p.released
         FROM products p
         LEFT JOIN product_categories c ON p.category_id = c.category_id
-        WHERE p.released = 1
+        WHERE p.released = true
     """
     if category:
         query += f" AND c.category = '{category}'"
